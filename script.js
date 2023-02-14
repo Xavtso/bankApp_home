@@ -189,6 +189,7 @@ dotContainer.insertAdjacentHTML('beforeend',
 )
   } )
 };
+createDots();
 
 const activateDot = function(slide){
   document.querySelectorAll('.dots__dot')
@@ -261,8 +262,8 @@ dotContainer.addEventListener('click',function(e){
 const init = function(){
   goToSlide(0);
   activateDot(0);
-  createDots();
 }
+init();
 
 // Sections entry animation
 const revealSections = function(entries,observer){
