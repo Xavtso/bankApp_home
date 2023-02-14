@@ -74,24 +74,6 @@ btnScrollTo.addEventListener('click', function(){
   section1.scrollIntoView({behavior: 'smooth'})
 });
 
-//old scroll method 
-  // const s1coords = section1.getBoundingClientRect();
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth'
-  // })
-// Modern scroll method
-// section1.scrollIntoView({behavior: 'smooth'})
-
-// document.querySelectorAll('.nav__link').forEach(function(el) {
-//   el.addEventListener('click',function(e){
-//     e.preventDefault();
-//     const id = this.getAttribute('href');
-//     document.querySelector(id).scrollIntoView({behavior: 'smooth'})
-//   })
-// })
-
 //Nav - scroller 
 document.querySelector('.nav__links').addEventListener('click',function(e){
   e.preventDefault();
@@ -124,17 +106,6 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 
 // Sticky Navigation
-
-//Less perfomance version
-
-// window.addEventListener('scroll',function(e){
-//   const startCoords = section1.getBoundingClientRect().top;
-//   if(window.scrollY > startCoords){
-                                                                        
-//     nav.classList.add('sticky');
-//   }
-//   else nav.classList.remove('sticky');
-// })
 
 // High perfomance version
 
