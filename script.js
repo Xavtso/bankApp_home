@@ -196,6 +196,7 @@ const activateDot = function(slide){
   .forEach( dot=> dot.classList.remove('dots__dot--active'));
     document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add('dots__dot--active')
 };
+activateDot(0);
 ///////////////////////////
 
 // Move between slides
@@ -203,7 +204,8 @@ const goToSlide = function(slide){
   slides.forEach(function(s,i){ 
     s.style.transform = `translateX(${100 * (i - slide)}%)`
   })
-}
+};
+ goToSlide(0);
 
 // Next slide | Previous Slide
 
@@ -257,13 +259,6 @@ dotContainer.addEventListener('click',function(e){
 /////////////////////////////
 
 // Others functions
-
-// Init start conditions
-const init = function(){
-  goToSlide(0);
-  activateDot(0);
-}
-init();
 
 // Sections entry animation
 const revealSections = function(entries,observer){
